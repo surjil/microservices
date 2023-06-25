@@ -23,7 +23,7 @@ resource "kubernetes_deployment" "offer" {
       }
       spec {
         container {
-          image = "comdevops/spring:v1"
+          image = "surjil1612/spring:v1"
           name  = "offer"
           port {
             container_port = 1001

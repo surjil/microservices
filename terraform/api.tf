@@ -35,7 +35,7 @@ resource "kubernetes_deployment" "zuul-api" {
           }
         }
         container {
-          image = "comdevops/api:v1"
+          image = "surjil1612/api:v1"
           name  = "zuul-api"
           port {
             container_port = 9999

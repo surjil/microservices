@@ -23,7 +23,7 @@ resource "kubernetes_deployment" "cart" {
       }
       spec {
         container {
-          image = "comdevops/ui:v2"
+          image = "surjil1612/ui:v2"
           name  = "cart"
           port {
             container_port = 1004

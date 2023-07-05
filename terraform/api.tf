@@ -1,12 +1,12 @@
 resource "kubernetes_namespace" "zuul-api" {
   metadata {
-    name = "ms"
+    name = "mss"
   }
 }
 resource "kubernetes_deployment" "zuul-api" {
   metadata {
     name      = "zuul-api"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     replicas = 1
@@ -48,7 +48,7 @@ resource "kubernetes_deployment" "zuul-api" {
 resource "kubernetes_service" "zuul-api" {
   metadata {
     name      = "zuul-api"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     selector = {

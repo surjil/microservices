@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name:  "zuul-api"
-        image: surjil/api:v1
+        image: surjil1612/api:v1
         ports:
         - containerPort: 9999
           name:  "zuul-api"

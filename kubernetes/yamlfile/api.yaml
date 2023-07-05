@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name:  "zuul-api"
-  namespace: ms
+  namespace: mss
   labels:
     app:  "zuul-api"
 spec:
@@ -43,7 +43,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: "zuul-api"
-  namespace: ms
+  namespace: mss
 spec:
   selector:
     app: "zuul-api"

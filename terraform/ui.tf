@@ -1,12 +1,12 @@
 resource "kubernetes_namespace" "react-ui" {
   metadata {
-    name = "ms"
+    name = "mss"
   }
 }
 resource "kubernetes_deployment" "react-ui" {
   metadata {
     name      = "react-ui"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     replicas = 1
@@ -36,7 +36,7 @@ resource "kubernetes_deployment" "react-ui" {
 resource "kubernetes_service" "react-ui" {
   metadata {
     name      = "react-ui"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     selector = {

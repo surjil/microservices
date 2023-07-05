@@ -1,12 +1,12 @@
 resource "kubernetes_namespace" "cart" {
   metadata {
-    name = "ms"
+    name = "mss"
   }
 }
 resource "kubernetes_deployment" "cart" {
   metadata {
     name      = "cart"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     replicas = 1
@@ -36,7 +36,7 @@ resource "kubernetes_deployment" "cart" {
 resource "kubernetes_service" "cart" {
   metadata {
     name      = "cart"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     selector = {

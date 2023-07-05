@@ -1,12 +1,12 @@
 resource "kubernetes_namespace" "shoe" {
   metadata {
-    name = "ms"
+    name = "mss"
   }
 }
 resource "kubernetes_deployment" "shoe" {
   metadata {
     name      = "shoe"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     replicas = 1
@@ -36,7 +36,7 @@ resource "kubernetes_deployment" "shoe" {
 resource "kubernetes_service" "shoe" {
   metadata {
     name      = "shoe"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     selector = {

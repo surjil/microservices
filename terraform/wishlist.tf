@@ -1,12 +1,12 @@
 resource "kubernetes_namespace" "wishlist" {
   metadata {
-    name = "ms"
+    name = "mss"
   }
 }
 resource "kubernetes_deployment" "wishlist" {
   metadata {
     name      = "wishlist"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     replicas = 1
@@ -36,7 +36,7 @@ resource "kubernetes_deployment" "wishlist" {
 resource "kubernetes_service" "wishlist" {
   metadata {
     name      = "wishlist"
-    namespace = "ms"
+    namespace = "mss"
   }
   spec {
     selector = {

@@ -1,12 +1,12 @@
 resource "kubernetes_namespace" "offer" {
   metadata {
-    name = "mss"
+    name = "ms"
   }
 }
 resource "kubernetes_deployment" "offer" {
   metadata {
     name      = "offer"
-    namespace = "mss"
+    namespace = "ms"
   }
   spec {
     replicas = 1
@@ -36,7 +36,7 @@ resource "kubernetes_deployment" "offer" {
 resource "kubernetes_service" "offer" {
   metadata {
     name      = "offer"
-    namespace = "mss"
+    namespace = "ms"
   }
   spec {
     selector = {
